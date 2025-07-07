@@ -1,1 +1,236 @@
+:root {
+    --primary-color: #222165; /* أزرق نيلي داكن */
+    --background-color: #CB3826; /* أحمر طيني */
+    --accent-light: #F9EEE5; /* كريمي فاتح */
+    --accent-yellow: #F2BB23; /* أصفر ذهبي */
+    --text-color: #333333;
+    --white: #FFFFFF;
+}
 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--accent-light);
+}
+
+.en {
+    direction: ltr;
+    text-align: left;
+}
+
+.ar {
+    direction: rtl;
+    text-align: right;
+}
+
+header {
+    background: linear-gradient(rgba(34, 33, 101, 0.9), rgba(34, 33, 101, 0.9)), 
+                url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.logo .en {
+    color: var(--accent-yellow);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo .ar {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slogan {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--accent-light);
+}
+
+nav {
+    background-color: var(--background-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: var(--accent-yellow);
+    background-color: rgba(242, 187, 35, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin: 3rem 0;
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-yellow);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.about, .mission-vision, .contact {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--accent-yellow);
+}
+
+.mission-vision .vision, .mission-vision .goals {
+    margin-bottom: 2rem;
+}
+
+.mission-vision h3 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+.mission-vision ul, .mission-vision ol {
+    padding-right: 1.5rem;
+}
+
+.mission-vision li {
+    margin-bottom: 0.8rem;
+}
+
+.branches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.branch {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.branch:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-yellow);
+}
+
+.branch h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.language-switcher {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.language-switcher button {
+    background: var(--accent-yellow);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.language-switcher button:hover {
+    background: var(--background-color);
+    color: var(--accent-light);
+}
+
+.language-switcher button.active {
+    background: var(--primary-color);
+    color: var(--accent-yellow);
+    border: 1px solid var(--accent-yellow);
+}
+
+/* تأثيرات إضافية */
+.highlight {
+    color: var(--accent-yellow);
+    font-weight: bold;
+}
+
+.coffee-icon {
+    color: var(--background-color);
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+    
+    .branch {
+        min-width: 100%;
+    }
+}
